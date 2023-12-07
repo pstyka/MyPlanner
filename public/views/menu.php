@@ -1,15 +1,12 @@
 <!doctype html>
 <head>
     <title>menu</title>
-    <link rel="stylesheet" type="text/css" href="../css/style1.css">
+    <link rel="stylesheet" type="text/css" href="public/css/style1.css">
 </head>
 <body>
     <div class="menu-container">
-        <div class="logo">
-            <div class="logo-img">
-                <img src="../img/MyPlanner.svg">
-            </div>
-        </div>
+       <img src="public/img/MyPlanner.svg">
+
         <div class="buttons">
             <div class="row">
                 <button>Quests</button>
@@ -20,9 +17,9 @@
                 <button>Profile</button>
             </div>
         </div>
-        <div class="box2">
-            <button>Logout</button>
-        </div>
+        <form class="box2" action="index" method="GET">
+            <button type="submit">Logout</button>
+        </form>
     </div>
         
     
