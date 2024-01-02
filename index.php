@@ -9,4 +9,8 @@ Routing::get('index','DefaultController');
 Routing::get('menu','DefaultController');
 Routing::post('login', 'SecurityController');
 Routing::get('sign','DefaultController');
+Routing::get('profile','DefaultController');
+Routing::get('quests','DefaultController');
+Routing::get('drawQuest', 'QuestsController');
+
 Routing::run($path);

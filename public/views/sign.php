@@ -2,6 +2,7 @@
 <head>
     <title>SIGN IN PAGE</title>
     <link rel="stylesheet" type="text/css" href="public/css/style1.css">
+    <script type="text/javascript" src="./public/js/script.js" defer></script>
 </head>
 <body>
 <div class="container">
@@ -12,10 +13,10 @@
             <input name="email" type="text" placeholder="email@email.com">
             Nickname
             <input name="name" type="text" placeholder="Nickname">
-            Birthday
-            <input name="birthday" type="date" placeholder="dd.mm.yyyy">
             Password
-            <input name="password" type="password" placeholder="password">
+            <input name="password" type="text" placeholder="password">
+            Confirm Password
+            <input name="confirmpassword" type="password" placeholder="password">
             <button type="submit">Sign Up</button>
 
         </form>

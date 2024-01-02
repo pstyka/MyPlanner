@@ -4,7 +4,6 @@ require_once 'AppController.php';
 
 class DefaultController extends AppController{
     public function index() {
-        //TODO display login.php
         $this->render('login');
     }
     public function menu() {
@@ -12,5 +11,12 @@ class DefaultController extends AppController{
     }
     public function sign() {
         $this->render('sign');
+    }
+    public function profile() {
+        $this->render('profile');
+    }
+
+    public function quests() {
+        $this->render('quests');
     }
 }

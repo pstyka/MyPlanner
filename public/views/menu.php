@@ -4,23 +4,33 @@
     <link rel="stylesheet" type="text/css" href="public/css/style1.css">
 </head>
 <body>
-    <div class="menu-container">
-       <img src="public/img/MyPlanner.svg">
+    <div class="container">
+        <div class="logo">
+            <img src="public/img/MyPlanner.svg">
+            Menu
+        </div>
 
         <div class="buttons">
             <div class="row">
-                <button>Quests</button>
+            <form class="quests" action="quests" method="GET">
+                    <button type="submit">Quests</button>
+                </form>
                 <button>Make your plan</button>
             </div>
             <div class="row">
                 <button>Settings</button>
-                <button>Profile</button>
+                <form class="profile" action="profile" method="GET">
+                    <button type="submit">Profile</button>
+                </form>
+
+            </div>
+            <div class="logout">
+                <form class="box2" action="index" method="GET">
+                    <button type="submit">Logout</button>
+                </form>
             </div>
         </div>
-        <form class="box2" action="index" method="GET">
-            <button type="submit">Logout</button>
-        </form>
-    </div>
         
-    
+        
+    </div>
 </body>
