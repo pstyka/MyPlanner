@@ -7,10 +7,10 @@ class Quest
     private $name;
     private $description;
     private $points;
-    private $id;
-    public function __construct( $name, $description, $points,$id=null)
+    private $daily_quests_id;
+    public function __construct( $name, $description, $points,$quest_id=null)
     {
-        $this->id = $id;
+        $this->quest_id = $quest_id;
         $this->name = $name;
         $this->description = $description;
         $this->points = $points;
@@ -18,13 +18,13 @@ class Quest
 
     public function getId()
     {
-        return $this->id;
+        return $this->quest_id;
     }
 
 
     public function setId($id): void
     {
-        $this->id = $id;
+        $this->quest_id = $id;
     }
 
 

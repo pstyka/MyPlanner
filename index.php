@@ -10,7 +10,9 @@ Routing::get('menu','DefaultController');
 Routing::post('login', 'SecurityController');
 Routing::get('sign','DefaultController');
 Routing::get('profile','DefaultController');
-Routing::get('quests','DefaultController');
+Routing::get('quests','QuestsController');
 Routing::get('drawQuest', 'QuestsController');
+Routing::post('register','SecurityController');
+Routing::get('logout','SecurityController');
 
 Routing::run($path);

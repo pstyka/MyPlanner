@@ -16,7 +16,6 @@
             </div>
             <div class="profile-boxes">
                 <div class="profile-info">
-                    Nickname
                     <div class="profile-picture">
                         <img src="public/img/jarek.png">
                     </div>

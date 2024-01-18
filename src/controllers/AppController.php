@@ -29,4 +29,10 @@ class AppController {
         }
         print $output;
     }
+    public function loginCheck(){
+        if(!isset($_SESSION['user_id'])){
+            $this->render('index');
+            exit();
+        }
+    }
 }

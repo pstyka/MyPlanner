@@ -12,15 +12,27 @@
     <div class="logo-quests">
         <img src="public/img/MyPlanner.svg">
         Quests
+        <?php if(isset($messages)){
+
+            foreach ($messages as $message){
+                echo $message;
+            }
+        }
+        ?>
     </div>
     <section class="tasks">
-        <div class="task-box">
-            <div class="upper-task-box">
-                <div class="task">
-
+        <div class="task-column">
+            <?php foreach($quests as $quest):?>
+                <div class="task-box">
+                        <div class="task-name">
+                            <?= $quest->getName(); ?>
+                        </div>
+                        <p class="task-description">
+                            <?= $quest->getDescription();?>
+                        </p>
+                        <form class="finish-task"></form>
                 </div>
-                <div class="task-timer"></div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </section>
     <div class="under-tasks">

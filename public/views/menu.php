@@ -1,9 +1,15 @@
+<?php
+session_start();
+?>
+
+
 <!doctype html>
 <head>
     <title>menu</title>
     <link rel="stylesheet" type="text/css" href="public/css/style1.css">
 </head>
 <body>
+<?php if(!empty($_SESSION['user_id'])) : ?>
     <div class="container">
         <div class="logo">
             <img src="public/img/MyPlanner.svg">
@@ -25,7 +31,7 @@
 
             </div>
             <div class="logout">
-                <form class="box2" action="index" method="GET">
+                <form class="box2" action="logout" method="GET">
                     <button type="submit">Logout</button>
                 </form>
             </div>
@@ -33,4 +39,5 @@
         
         
     </div>
+<?php endif; ?>
 </body>

@@ -7,18 +7,17 @@
 <body>
 <div class="container">
     <div class="form-container sign-in">
-        <form class="login" action="signin" method="POST">
+        <form class="login" action="register" method="POST">
             <h1>Sign Up</h1>
             E-mail
             <input name="email" type="text" placeholder="email@email.com">
             Nickname
             <input name="name" type="text" placeholder="Nickname">
             Password
-            <input name="password" type="text" placeholder="password">
+            <input name="password" type="password" placeholder="password">
             Confirm Password
-            <input name="confirmpassword" type="password" placeholder="password">
+            <input name="confirm-password" type="password" placeholder="confirm-password">
             <button type="submit">Sign Up</button>
-
         </form>
 
         <form class="back" action="index" method="GET">

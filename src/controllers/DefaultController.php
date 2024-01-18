@@ -7,16 +7,20 @@ class DefaultController extends AppController{
         $this->render('login');
     }
     public function menu() {
+        session_start();
+        $this->loginCheck();
         $this->render('menu');
     }
     public function sign() {
         $this->render('sign');
     }
     public function profile() {
+        session_start();
+        $this->logincheck();
+        //$nickname = $this->userRepository->getName();
         $this->render('profile');
     }
 
-    public function quests() {
-        $this->render('quests');
-    }
+
+
 }

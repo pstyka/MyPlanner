@@ -29,29 +29,26 @@ class UserRepository extends Repository
             $user['users_id']
         );
     }
-    public function addUser(User $user): void{
 
-        if($_SERVER['REQUEST_METHOD']=='POST'){
-            $email=$_POST['email'];
-            $name = $_POST["name"];
-            $password = $_POST["password"];
-            $confirmpassword = $_POST["confirmpassword"];
-        }
+    public function addUser(User $user): void {
         $stmt = $this->database->connect()->prepare(
-            'INSERT INTO users (nickname,email,password)
-                    VALUES (?,?,?,?,?)'
+            'INSERT INTO users (email, password, nickname)
+        VALUES (?, ?, ?)'
         );
         $stmt->execute([
-            $user->getName(),
             $user->getEmail(),
-            $user->getPassword()
+            $user->getPassword(),
+            $user->getName()
         ]);
     }
-    public function getUserId(String $email){
+    public function getHashedPassword(String $email){
         $stmt = $this->database->connect()->prepare('
             SELECT * FROM public.users WHERE email = :email
         ');
-        $stmt->bindParam(':users_id', $user_id, PDO::PARAM_INT);
+        $stmt->bindParam(':password', $password, PDO::PARAM_STR);
         $stmt->execute();
+        $hashedPassword=$stmt->fetch(PDO::FETCH_ASSOC);
+        return $hashedPassword;
     }
+
 }
