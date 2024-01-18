@@ -1,0 +1,181 @@
+@font-face {
+    font-family: "JejuHallasan";
+    src: url("https://db.onlinewebfonts.com/t/2da952d097bffd198ec0f0aa3fdd6804.eot");
+    src: url("https://db.onlinewebfonts.com/t/2da952d097bffd198ec0f0aa3fdd6804.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/2da952d097bffd198ec0f0aa3fdd6804.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/2da952d097bffd198ec0f0aa3fdd6804.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/2da952d097bffd198ec0f0aa3fdd6804.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/2da952d097bffd198ec0f0aa3fdd6804.svg#JejuHallasan")format("svg");
+}
+body {
+    margin: 0;
+}
+.container {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(180deg, #ccc7e3 0%, #4547c5 93.23%);
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+}
+.menu-container {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(180deg, #E3D6C7 0%, #BF9E56 93.23%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+.logo {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+
+
+}
+.logo2 {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.login-container {
+    width: 400px;
+    height: 351px;
+    flex-shrink: 0;
+    width: 25%; 
+    border-radius: 20px;
+    background: #D9D9D9;
+    margin-left: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+button {
+    background: #D9D9D9;
+    width: 80%;
+    border: none;
+    margin: 1em;
+    border-radius: 20px;
+    color: #000;
+    
+
+    text-align: center;
+    font-family:"Open Sans";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    
+}
+input {
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 20px;
+    width: 80%;
+    color: black;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 10px;    
+    
+}
+.name {
+    font-family: "Open Sans";
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    justify-content: center;
+    align-items: center; 
+}
+.description {
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+}
+.under-login {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+}
+.sign-in {
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 10em;
+}
+.forgot-password {
+    font-family: "Open Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.box1 {
+    width: 290px;
+    height: 149px;
+    border-radius: 10px;
+    background: #D9D9D9;
+    box-shadow: 0px 8px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 10px;
+}
+.box-name {
+    color: #000;
+    text-align: center;
+    font-family: JejuHallasan;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height:normal;
+}
+.box-name2 {
+    color: #000;
+    text-align: center;
+    font-family: JejuHallasan;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height:normal;
+}
+.box2 {
+    width: 153px;
+    height: 55px;
+    position: absolute;
+    left: 13px;
+    bottom: 28px;
+    border-radius: 10px;
+    background: #D9D9D9;
+    box-shadow: 0px 8px 4px 0px rgba(0, 0, 0, 0.25);
+}
