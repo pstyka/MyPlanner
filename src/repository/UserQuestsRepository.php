@@ -11,7 +11,6 @@ class UserQuestsRepository extends Repository
     {
         $stmt = $this->database->connect()->prepare('
         INSERT INTO userquests (user_id, daily_quests_id) VALUES (?, ?)
-        ON CONFLICT (user_id, daily_quests_id) DO NOTHING
     ');
 
         $stmt->execute([$userId, $questId]);

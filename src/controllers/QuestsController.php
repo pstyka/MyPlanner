@@ -48,7 +48,7 @@ class QuestsController extends AppController
         $currentUserId = $_SESSION["user_id"];
         $userQuestRepository->addUserQuest($currentUserId, $randomQuestId);
 
-       // $this->setDrawnQuests($this->getDrawnQuests()+1);
+
 
         $quests = $this->questsRepository->getAllQuests();
         $this->render('quests', ['quests' => $quests]);;
@@ -63,6 +63,32 @@ class QuestsController extends AppController
         $userStatsRepository->incrementCompletedQuests($currentUserId);
         $this->setDrawnQuests($this->getDrawnQuests() - 1);
         $quests = $this->questsRepository->getAllQuests();
+        try {
+            // Kod obsługi żądania i wywołania wyzwalacza
+        } catch (PDOException $e) {
+            if ($e->getCode() === 'P0001') {
+
+                $quests = $this->questsRepository->getAllQuests();
+                $this->render('quests', ['quests' => $quests, 'message' => 'User has reached the quest limit (3 quests)']);
+            } else {
+
+                throw $e;
+            }
+        }
         $this->render('quests', ['quests' => $quests, 'message' => 'Quest finished successfully']);
     }
+    public function completedQuests()
+    {
+        session_start();
+        $currentUserId = $_SESSION["user_id"];
+        $userStatsRepository = new \repository\UserStatsRepository();
+        $completedQuests = $userStatsRepository->completedQuests($currentUserId);
+
+        // Zwróć odpowiedź jako JSON, jeśli chcesz przekazać dane z powrotem do JavaScript
+
+        echo json_encode(['completedQuests' => $completedQuests]);
+        exit;
+    }
+
+
 }

@@ -271,12 +271,19 @@ body {
     justify-content: center;
     width:150px;
     height: 150px;
-    margin: 10px;
-    flex-shrink: 0;
+    //margin: 10px;
+    //flex-shrink: 0;
     border-radius: 10px;
     background: #D9D9D9;
     box-shadow: 0px 8px 4px 0px rgba(0, 0, 0, 0.25);
     font-size: 18px;
+}
+.completed-quests{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+
 }
 .back-profile button{
     background-color: #D9D9D9;
@@ -305,7 +312,7 @@ body {
     box-shadow: 0px 8px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .quest-container {
-    background-color: beige;
+    background-color: #D9D9D9;
     border-radius: 20px;
     box-shadow: 0 5px  15px rgba(0,0,0);
     min-width: 600px;
@@ -342,6 +349,25 @@ body {
     align-items: center;
     justify-content: center;
 }
+.finish-task {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.finish-task button{
+    bottom: 10%;
+    background-color: #D9D9D9;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0px 8px 4px 0px rgba(0, 0, 0, 0.25);
+    border:#333333;
+    border-style: solid;
+    border-width: 3px;
+    margin-left: 5.5em;
+
+}
 .under-tasks {
     display: flex;
     flex-direction: row;
@@ -354,23 +380,36 @@ body {
     height:200px;
     margin: 5px;
     border-radius: 10px;
+    border:#333333;
+    border-style: solid;
+    border-width: 5px;
+    display: flex;
+    flex-direction: column;
+    //height: 100%;
 
 }
 .task-name {
-    background-color: aquamarine;
+    background-color: #333333;
     width: 100%;
     height: 40px;
-    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+
+
 }
 .task-description {
-    overflow:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    white-space: pre-wrap;
     word-wrap: break-word;
-    white-space: nowrap;
-    word-wrap: break-word;
-    margin: 5px;
+    white-space: normal;
+    text-indent: 0;
+    height: 55%;
+
 }
 .no-valid {
     border-radius: 3px solid red;
@@ -387,22 +426,135 @@ body {
     margin: 5px;
     box-shadow: 0px 8px 4px 0px rgba(0, 0, 0, 0.25);
 }
+.hero {
+    background: #71777c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0 5px  15px rgba(0,0,0);
+    position:relative;
+    width: 800px;
+    max-width: 100%;
+    min-height: 560px;
+    overflow: hidden;
+}
+.calendar {
+    width: 300px;
+    height: 250px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    
+}
+.left, .right {
+    
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 24px;
+    
+}
+.right {
+    width: 42%;
+    background: #F4351E;
+    color: #fff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.left {
+    width: 58%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.calendar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+#date {
+    font-size: 100px;
+    line-height: 90px;
+}
+.left-side, .right-side {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.todo {
+    width:300px;
+    background: #D9D9D9;
+    height:500px;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: auto;
 
+}
 
+.add-button button {
+    background-color: #353434;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin: 5px;
+    box-shadow: 0px 8px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.popup{
+    visibility: hidden;
+    width:400px;
+    background: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333333;
+    border: #353434 solid 3px;
+}
+.open-popup {
+    visibility: visible;
+}
+.task-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.task-list{
 
+}
+.task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    border: black solid 3px;
+}
+.upper-task {
+    display: flex;
+    flex-direction: row;
 
-
-
-
-
-
-
-
-
-
-
-
-
+}
+.upper-task p {
+    margin-left: 15px;
+}
+.upper-task h2{
+    margin-right: 15px;
+}
 
 @media only screen and (max-device-width: 430px) {
     .body{
@@ -463,5 +615,8 @@ body {
         padding: 100px 150px;
         height: 100%;
         width: 100%;
+    }
+    .container input {
+        font-size: 30px;
     }
 }

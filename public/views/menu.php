@@ -6,7 +6,7 @@ session_start();
 <!doctype html>
 <head>
     <title>menu</title>
-    <link rel="stylesheet" type="text/css" href="public/css/style1.css">
+    <link rel="stylesheet" type="text/css" href="public/css/menu.css">
 </head>
 <body>
 <?php if(!empty($_SESSION['user_id'])) : ?>
@@ -20,8 +20,11 @@ session_start();
             <div class="row">
             <form class="quests" action="quests" method="GET">
                     <button type="submit">Quests</button>
+            </form>
+                <form class="plan" action="plan" method="GET">
+                    <button type="submit">Make your plan</button>
                 </form>
-                <button>Make your plan</button>
+
             </div>
             <div class="row">
                 <button>Settings</button>
@@ -39,5 +42,5 @@ session_start();
         
         
     </div>
-<?php endif; ?>
+    <?php endif; ?>
 </body>

@@ -30,7 +30,9 @@ class SecurityController extends AppController
         if(password_verify($password,$user->getPassword())){
 
             $user_id = $userRepository->getUser($email)->getUserid();
+            $user_nickname = $userRepository->getUser($email)->getName();
             $_SESSION['user_id'] = $user_id;
+            $_SESSION['user_nickname'] = $user_nickname;
             return $this->render('menu');
         }
         if($user->getPassword() != $password) {
@@ -41,6 +43,7 @@ class SecurityController extends AppController
         session_start();
         unset($_SESSION['user_id']);
         unset($_SESSION['quest_id']);
+        unset($_SESSION['user_nickname']);
         session_destroy();
         return $this->render('login');
     }

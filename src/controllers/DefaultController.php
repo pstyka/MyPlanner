@@ -20,6 +20,12 @@ class DefaultController extends AppController{
         //$nickname = $this->userRepository->getName();
         $this->render('profile');
     }
+    public function nickname(){
+        session_start();
+        $currentUserNickname = $_SESSION['user_nickname'];
+        echo json_encode(['currentUserNickname' =>$currentUserNickname]);
+        exit;
+    }
 
 
 

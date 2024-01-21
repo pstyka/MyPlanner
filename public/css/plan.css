@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+}
+body {
+    background-color:rgb(212, 210, 204) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.hero {
+    background: #71777c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0 5px  15px rgba(0,0,0);
+    position:relative;
+    width: 800px;
+    max-width: 100%;
+    min-height: 560px;
+    overflow: hidden;
+}
+.calendar {
+    margin-top: 10px;
+    width: 300px;
+    height: 250px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    
+}
+.left, .right {
+    
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 24px;
+    
+}
+.right {
+    width: 42%;
+    background: #F4351E;
+    color: #fff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.left {
+    width: 58%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.calendar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+#date {
+    font-size: 100px;
+    line-height: 90px;
+}
+.left-side, .right-side {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.todo {
+    width:300px;
+    background: #D9D9D9;
+    height:500px;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: auto;
+
+}
+.add-button{
+    margin-top: 25px;
+}
+.add-button button {
+    background-color: #353434;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin: 5px;
+    box-shadow: 0px 8px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.popup{
+    visibility: hidden;
+    width:400px;
+    background: #71777c;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #fff;
+    border: #353434 solid 3px;
+}
+.open-popup {
+    visibility: visible;
+}
+.popup button {
+    background-color: #353434;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin: 5px;
+    margin-top: 20px;
+    box-shadow: 0px 8px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.task-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.task-list{
+
+}
+.task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    border: black solid 3px;
+}
+.upper-task {
+    display: flex;
+    flex-direction: row;
+
+}
+.upper-task p {
+    margin-left: 15px;
+}
+.upper-task h2{
+    margin-right: 15px;
+}
+.back {
+    margin-bottom: 10px;
+}
+.back button {
+    
+    background-color: #353434;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin: 5px;
+    box-shadow: 0px 8px 4px 0px rgba(0, 0, 0, 0.25);
+}
+@media only screen and (max-device-width: 430px) {
+    .hero{
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+    }
+    .left-side, .right-side {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .calendar{
+        position: absolute;
+        top:0;
+        width: 100%;
+        margin-top: -10px;
+    }
+    .calendar-logo img{
+        width: 200%;
+    }
+    .calendar-logo {
+        position: absolute;
+        top:15%;
+        font-size: 60px;
+    }
+    .todo{
+        width:80%;
+        background: #D9D9D9;
+        height:100%;
+        margin: 10px;
+        border-radius: 10px;
+        overflow: auto;
+        font-size: 30px;
+    }
+    .task {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        border: black solid 3px;
+        padding: 20px;
+    }
+    .upper-task {
+        display: flex;
+        flex-direction: row;
+    
+    }
+    .upper-task p {
+        margin-left: 15px;
+        font-size: 25px
+    }
+    .upper-task h2{
+        margin-right: 15px;
+        font-size: 50px;
+    }
+    .left, .right {
+        font-size: 36px;
+    }
+    #date {
+        font-size: 120px;
+        line-height: 100px;
+    }
+    .back{
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+    }
+    .back button {
+        font-size: 30px;
+        padding: 20px 90px;    
+    }
+    .add-button{
+        margin-bottom: 10px;
+        margin-left: 460px;
+    }
+    .add-button button {
+        
+        font-size: 30px;
+        padding: 20px 90px;  
+    }
+
+}
