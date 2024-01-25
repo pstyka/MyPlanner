@@ -38,11 +38,13 @@ MyPlanner is an application designed for managing your day. You can set activiti
 
 #### Registration
 Users can register by providing their email, name, password, and password confirmation. The password is securely hashed before storing it in the database.
+
 ![image](https://github.com/pstyka/WDPAI/assets/107481814/a3c2524e-df0c-46c5-992c-1bf1b7d86824)
 
 
 #### Login
 Users can log in using their email and password. A user session is set upon successful login.
+
 ![image](https://github.com/pstyka/WDPAI/assets/107481814/212ba689-2d43-4347-947e-c15cf8464ce2)
 
 
