@@ -26,6 +26,20 @@ class DefaultController extends AppController{
         echo json_encode(['currentUserNickname' =>$currentUserNickname]);
         exit;
     }
+    public function level(){
+        session_start();
+        $currentUserId= $_SESSION['user_id'];
+        $userStatsRepository = new \repository\UserStatsRepository();
+        $level = $userStatsRepository->getLevel($currentUserId);
+        echo json_encode(['currentLevel'=>$level]);
+    }
+    public function points(){
+        session_start();
+        $currentUserId= $_SESSION['user_id'];
+        $userStatsRepository = new \repository\UserStatsRepository();
+        $points = $userStatsRepository->getPoints($currentUserId);
+        echo json_encode(['currentPoints'=>$points]);
+    }
 
 
 

@@ -15,8 +15,10 @@
        
         <div class="profile-container">
             <div class="level">
-                <div class="level-circle">1</div>
-                <div class="level-bar"></div>
+                <div class="level-circle"></div>
+                <div class="level-bar">
+                    <div class="bar" id="bar"></div>
+                </div>
             </div>
             <div class="profile-boxes">
                 <div class="profile-info">

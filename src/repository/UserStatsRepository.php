@@ -29,6 +29,26 @@ class UserStatsRepository extends Repository
 
         return $result['completed_quests'] ?? 0;
     }
+    public function getLevel(String $id){
+        $stmt = $this->database->connect()->prepare('
+            SELECT level FROM public.userstats WHERE user_id = :id
+        ');
+
+        $stmt->execute([$id]);
+        $userLevel=$stmt->fetch(PDO::FETCH_ASSOC);
+        return $userLevel;
+
+    }
+    public function getPoints(String $id){
+        $stmt = $this->database->connect()->prepare('
+            SELECT points FROM public.userstats WHERE user_id = :id
+        ');
+
+        $stmt->execute([$id]);
+        $userPoints = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $userPoints;
+
+    }
 
 
 

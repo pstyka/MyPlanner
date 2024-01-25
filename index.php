@@ -21,5 +21,7 @@ Routing::get("nickname",'DefaultController');
 Routing::get("plan",'PlanController');
 Routing::post('saveTask','PlanController');
 Routing::get('getAllTasks','PlanController');
+Routing::get("level",'DefaultController');
+Routing::get("points",'DefaultController');
 
 Routing::run($path);
