@@ -24,7 +24,7 @@
                 <div class="profile-info">
                     <div class="user-nickname"></div>
                     <div class="profile-picture">
-                        <img src="public/img/jarek.png">
+                        <img src="public/img/icon.png">
                     </div>
                 </div>
                 <div class="boxes completed-quests"></div>
