@@ -65,7 +65,8 @@ Users can retrieve their current level.
 #### Fetching Points:
 Users can retrieve the number of experience points.
 
-![image](https://github.com/pstyka/WDPAI/assets/107481814/1c1dbc23-38e6-49f9-8fe9-81ba961afb7a)
+![Zrzut ekranu 2024-03-3 o 20 57 41](https://github.com/pstyka/MyPlanner/assets/107481814/38ca71e3-5eae-4f2d-96d9-0a629fc4ef9a)
+
 
 
 ### Drawing and completing quests
